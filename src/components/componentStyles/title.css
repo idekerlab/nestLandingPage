@@ -1,29 +1,25 @@
 @import '../../constants.css';
 
-#titlesDiv {
+h1 {
   display: inline-block;
-  font-style: normal;
   font-weight: 100;
   color: white;
-  font-family: Roboto, sans-serif;
   vertical-align: middle;
   margin: var(--spacing-margin-y) var(--spacing-margin-x);
-  height: fit-content;
 }
 
-#titleDiv {
+#title {
   font-size: 200px;
   line-height: 140px;
-  padding: 0;
   font-weight: 100;
-  margin: 0;
+  display: block;
+  font-weight: 100;
 }
 
-#subtitleDiv {
+#subtitle {
   font-size: 38px;
-  line-height: 38px;
-  padding-top: 20px;
+  padding-top: 18px;
   position: relative;
   font-weight: 100;
-  margin: 0;
+  display: block;
 }

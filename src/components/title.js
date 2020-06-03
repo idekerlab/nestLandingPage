@@ -1,22 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import './componentStyles/title.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import './componentStyles/title.css';
 
-const Title = props => (
-  <div id='titlesDiv'> 
-    <h1 id='titleDiv'>
-      {props.title}
-    </h1>
-    <h1 id='subtitleDiv'>
-      {props.subtitle}
-    </h1>
-  </div>
-)
+const Title = (props) => (
+  <h1>
+    <span id='title'>{props.title}</span>
+    <span id='subtitle'>{props.subtitle}</span>
+  </h1>
+);
 
 Title.propTypes = {
-    title: PropTypes.string,
-    subtitle: PropTypes.string
-}
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+};
 
-export default Title
-
+export default Title;
