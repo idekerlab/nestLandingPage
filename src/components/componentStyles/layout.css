@@ -630,5 +630,9 @@ main {
 }
 
 #headerWrapper {
-  height: 80px;
+  height: 67px;
+}
+
+#mainDiv {
+  margin: 0 auto;
 }

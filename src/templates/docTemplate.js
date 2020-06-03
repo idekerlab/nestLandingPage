@@ -1,28 +1,29 @@
-import React from 'react'
-import {graphql} from 'gatsby'
-import Layout from "../components/layout"
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
 
+const Template = ({ data }) => {
+  const { markdownRemark } = data; // data.markdownRemark holds your post data
 
-const Template = ({data}) => {
-  
-  const {markdownRemark} = data // data.markdownRemark holds your post data
-  
-  const {frontmatter, html} = markdownRemark
-  
+  const { frontmatter, html } = markdownRemark;
+
   return (
     <Layout>
-      <div className="md-doc">
+      <div className='md-doc'>
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
-        <div className="md-doc-content" dangerouslySetInnerHTML={{__html: html}} />
+        <div
+          className='md-doc-content'
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: {path: {eq: $path}}) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
@@ -31,6 +32,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default Template
+export default Template;

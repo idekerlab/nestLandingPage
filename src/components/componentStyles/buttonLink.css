@@ -1,0 +1,130 @@
+@import '../../constants.css';
+
+:root {
+  --tooltip-width: 215px;
+  --tooltip-height: 70px;
+  --arrow-size: 10px;
+  --tooltip-offset: 20px;
+  --tooltip-border-radius: 15px;
+}
+
+form {
+  margin-bottom: var(--button-spacing);
+}
+
+button {
+  font-style: normal;
+  font-weight: 100;
+  font-size: 28px;
+  line-height: 41px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 260px;
+  height: 63px;
+  vertical-align: middle;
+  background-color: rgb(255, 140, 0);
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: rgb(255, 140, 0, 0.9);
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 26.1px;
+  border-radius: 1px;
+}
+
+#buttonText {
+  display: inline-block;
+  margin: auto;
+}
+
+#tooltip {
+  position: relative;
+}
+
+#tooltip #tooltipText {
+  visibility: hidden;
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: white;
+  color: rgb(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 5px;
+  border-radius: var(--tooltip-border-radius);
+  z-index: 2;
+  position: absolute;
+  line-height: 15px;
+  text-align: center;
+  display: grid;
+  align-items: center;
+  font-size: 15px;
+  transition-delay: 0s;
+}
+
+#tooltip:hover #tooltipText {
+  visibility: visible;
+  transition-delay: 0.3s;
+}
+
+#tooltip #tooltipText.top::after {
+  content: ' ';
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: calc(-1 * var(--arrow-size));
+  border-width: var(--arrow-size);
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+#tooltip #tooltipText.bottom::after {
+  content: ' ';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: calc(-1 * var(--arrow-size));
+  border-width: var(--arrow-size);
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+.top {
+  bottom: 100%;
+  left: 50%;
+  transform: translate(calc(-1 * (var(--tooltip-width) / 2)), calc(-1 * var(--tooltip-offset)));
+}
+
+.bottom {
+  top: 100%;
+  left: 50%;
+  transform: translate(calc(-1 * (var(--tooltip-width) / 2)), var(--tooltip-offset));
+}
+
+#tooltipText {
+  visibility: hidden;
+}
+
+#tooltipConnector {
+  width: var(--tooltip-width);
+  background-color: transparent;
+  height: calc(var(--tooltip-offset) + var(--tooltip-border-radius));
+  z-index: 1;
+  position: absolute;
+  visibility: hidden;
+}
+
+#tooltip:hover #tooltipConnector {
+  visibility: visible;
+}
+
+#tooltipConnector.top {
+  transform: translate(-50%, 0);
+}
+
+#tooltipConnector.bottom {
+  transform: translate(-50%, 0);
+}

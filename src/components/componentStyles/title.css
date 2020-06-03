@@ -1,0 +1,29 @@
+@import '../../constants.css';
+
+#titlesDiv {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 100;
+  color: white;
+  font-family: Roboto, sans-serif;
+  vertical-align: middle;
+  margin: var(--spacing-margin-y) var(--spacing-margin-x);
+  height: fit-content;
+}
+
+#titleDiv {
+  font-size: 200px;
+  line-height: 140px;
+  padding: 0;
+  font-weight: 100;
+  margin: 0;
+}
+
+#subtitleDiv {
+  font-size: 38px;
+  line-height: 38px;
+  padding-top: 20px;
+  position: relative;
+  font-weight: 100;
+  margin: 0;
+}
