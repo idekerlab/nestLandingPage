@@ -22,12 +22,12 @@
 button {
   font-style: normal;
   font-weight: 100;
-  font-size: 28px;
+  font-size: 24px;
   display: flex;
   align-items: center;
   text-align: center;
   width: 260px;
-  height: 63px;
+  height: 80px;
   vertical-align: middle;
   background-color: rgb(255, 140, 0);
   color: white;
@@ -39,7 +39,7 @@ button:hover {
   color: rgb(255, 140, 0, 0.9);
   font-weight: 800;
   cursor: pointer;
-  letter-spacing: -0.55px;
+  letter-spacing: -0.1px;
   border-radius: 1px;
 }
 
