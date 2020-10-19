@@ -1,3 +1,7 @@
+:root {
+  --header-height: 120px;
+}
+
 h2 {
   text-align: center;
   font-size: 36px;
@@ -12,4 +16,13 @@ p {
   margin-right: 5em;
   line-height: 28px;
   text-align: justify;
+}
+
+h2::before {
+  display: block;
+  content: ' ';
+  margin-top: calc(-1 * var(--header-height));
+  height: var(--header-height);
+  visibility: hidden;
+  pointer-events: none;
 }

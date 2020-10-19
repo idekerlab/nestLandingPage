@@ -1,0 +1,33 @@
+.header {
+  background: #242428;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  height: 67px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+.content {
+  margin-left: 2em;
+  margin-bottom: 0.2em;
+  margin-top: -0.1em;
+}
+
+.noUnderlineLink {
+  text-decoration: none;
+  color: #dddddd;
+  font-size: 28.35px;
+  font-weight: 100;
+}
+
+.underlineLink {
+  composes: noUnderlineLink;
+}
+
+.underlineLink:hover {
+  text-decoration: underline;
+}

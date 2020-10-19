@@ -1,4 +1,4 @@
-#ccmiHeader {
+.header {
   background: #242428;
   width: 100%;
   position: fixed;
@@ -7,7 +7,7 @@
   height: fit-content;
 }
 
-#ccmiHeaderContent {
+.content {
   position: absolute;
   top: 50%;
   right: 0;
@@ -17,36 +17,22 @@
   text-align: center;
 }
 
-.externalLink {
+.noUnderlineLink {
   text-decoration: none;
   color: #dddddd;
   font-size: 28.35px;
   font-weight: 100;
 }
 
-#ucsdLink {
-  font-family: serif;
+.underlineLink {
+  composes: noUnderlineLink;
 }
 
-#hyphenLink {
-  font-family: sans-serif;
+.underlineLink:hover {
+  text-decoration: underline;
 }
 
-#idekerLink {
-  font-family: sans-serif;
-}
-
-#idekerLink:hover {
-  font-weight: 700;
-  font-size: 27.4185px;
-}
-
-#ucsdLink:hover {
-  font-weight: 700;
-  font-size: 27.5805px;
-}
-
-#ccmiLogo {
+.logo {
   margin-left: 2.5em;
   width: 10em;
   position: absolute;
@@ -55,15 +41,8 @@
   margin-right: 1em;
 }
 
-#ccmiLogo:hover {
+.logo:hover {
   width: 10.6em;
   margin-left: 2.2em;
   cursor: pointer;
-}
-
-#expand {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
 }

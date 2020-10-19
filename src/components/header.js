@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import './componentStyles/header.css';
+import PropTypes from 'prop-types';
+
+import styles from './componentStyles/header.module.css';
 
 const Header = ({ siteTitle }) => (
-  <header id='header'>
-    <div id='headerDiv'>
-      <h1 id='headerContent'>
+  <header className={styles.header}>
+    <div className={styles.container}>
+      <h1 className={styles.content}>
         <a
-          id='ucsdLink'
-          className='externalLink'
+          className={styles.underlineLink}
           href='https://medschool.ucsd.edu/Pages/default.aspx'
           target='_blank'
           rel='noopener noreferrer'
@@ -16,8 +16,7 @@ const Header = ({ siteTitle }) => (
           UC San Diego
         </a>
         <a
-          id='hyphenLink'
-          className='externalLink'
+          className={styles.noUnderlineLink}
           href='http://idekerlab.ucsd.edu'
           target='_blank'
           rel='noopener noreferrer'
@@ -25,8 +24,7 @@ const Header = ({ siteTitle }) => (
           {' - '}
         </a>
         <a
-          id='idekerLink'
-          className='externalLink'
+          className={styles.underlineLink}
           href='http://idekerlab.ucsd.edu'
           target='_blank'
           rel='noopener noreferrer'

@@ -9,9 +9,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import CcmiHeader from './ccmiHeader';
 import Header from './header';
-import './componentStyles/layout.css';
+import LogoHeader from './logoHeader';
+
+import styles from './componentStyles/layout.module.css';
 
 const Layout = (props) => {
   const data = useStaticQuery(graphql`
@@ -26,10 +27,10 @@ const Layout = (props) => {
 
   return (
     <>
-      <div id='headerWrapper'>
-        <Header siteTitle={data.site.siteMetadata.title} />
+      <div className={styles.headerContainer}>
+        <LogoHeader siteTitle={data.site.siteMetadata.title} />
       </div>
-      <div id='mainDiv'>
+      <div className={styles.container}>
         <main>{props.children}</main>
         <footer style={{ backgroundColor: props.backgroundColor }}>
           © {new Date().getFullYear()}, UC, San Diego / Built with
@@ -43,6 +44,11 @@ const Layout = (props) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  backgroundColor: PropTypes.string,
+};
+
+Layout.defaultProps = {
+  backgroundColor: 'white',
 };
 
 export default Layout;

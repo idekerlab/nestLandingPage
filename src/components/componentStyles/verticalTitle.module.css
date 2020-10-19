@@ -5,21 +5,27 @@ h1 {
   font-weight: 100;
   color: white;
   vertical-align: middle;
+  text-align: center;
   margin: var(--spacing-margin-y) var(--spacing-margin-x);
 }
 
-#title {
-  font-size: 200px;
-  line-height: 140px;
+.text {
   font-weight: 100;
+  margin: 0;
   display: block;
-  font-weight: 100;
 }
 
-#subtitle {
+.title {
+  composes: text;
+  font-size: 200px;
+  line-height: 140px;
+}
+
+.subtitle {
+  composes: text;
   font-size: 38px;
-  padding-top: 18px;
+  padding-top: 20px;
   position: relative;
-  font-weight: 100;
-  display: block;
+  line-height: 38px;
+  left: -13px;
 }

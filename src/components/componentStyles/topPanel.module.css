@@ -1,6 +1,6 @@
 @import '../../constants.css';
 
-#topDiv {
+.container {
   background-color: rgba(3, 120, 193, 0.85);
   width: 100%;
   min-height: 450px;
@@ -9,14 +9,14 @@
   justify-content: center;
 }
 
-#topDivWrapper {
-  background-image: url(../../images/ideker_favicon.png);
+.background {
+  background-image: url(../../images/NeST_main_map.png);
   background-position-y: 20%;
   background-position-x: 0;
   min-height: 450px;
 }
 
-#topDivContents {
+.contents {
   vertical-align: middle;
   text-align: center;
   display: inline-block;

@@ -1,17 +1,17 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import './componentStyles/ccmiHeader.css';
-import ccmi from '../images/ccmi.png';
+import PropTypes from 'prop-types';
 
-const CcmiHeader = ({ siteTitle }) => (
-  <header id='ccmiHeader'>
+import ccmi from '../images/ccmi.png';
+import styles from './componentStyles/logoHeader.module.css';
+
+const LogoHeader = ({ siteTitle }) => (
+  <header className={styles.header}>
     <a href='https://ccmi.org/' target='_blank' rel='noopener noreferrer'>
-      <img src={ccmi} alt='CCMI Logo' id='ccmiLogo' />
+      <img src={ccmi} alt='CCMI Logo' className={styles.logo} />
     </a>
-    <span id='ccmiHeaderContent'>
+    <span className={styles.content}>
       <a
-        id='ucsdLink'
-        className='externalLink'
+        className={styles.underlineLink}
         href='https://medschool.ucsd.edu/Pages/default.aspx'
         target='_blank'
         rel='noopener noreferrer'
@@ -19,8 +19,7 @@ const CcmiHeader = ({ siteTitle }) => (
         UC San Diego
       </a>
       <a
-        id='hyphenLink'
-        className='externalLink'
+        className={styles.noUnderlineLink}
         href='http://idekerlab.ucsd.edu'
         target='_blank'
         rel='noopener noreferrer'
@@ -28,8 +27,7 @@ const CcmiHeader = ({ siteTitle }) => (
         {' - '}
       </a>
       <a
-        id='idekerLink'
-        className='externalLink'
+        className={styles.underlineLink}
         href='http://idekerlab.ucsd.edu'
         target='_blank'
         rel='noopener noreferrer'
@@ -40,12 +38,12 @@ const CcmiHeader = ({ siteTitle }) => (
   </header>
 );
 
-CcmiHeader.propTypes = {
+LogoHeader.propTypes = {
   siteTitle: PropTypes.string,
 };
 
-CcmiHeader.defaultProps = {
+LogoHeader.defaultProps = {
   siteTitle: ``,
 };
 
-export default CcmiHeader;
+export default LogoHeader;
