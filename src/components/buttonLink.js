@@ -4,34 +4,39 @@ import PropTypes from 'prop-types';
 import styles from './componentStyles/buttonLink.module.css';
 
 const ButtonLink = (props) => (
-  <span>
-    <div className={props.tooltip ? styles.tooltip : ''}>
-      <form
-        target='_blank'
-        rel='noopener noreferrer'
-        action={props.link}
-        className={props.vertical ? styles.vertical : styles.horizontal}
+  <div className={props.tooltip ? styles.tooltip : ''}>
+    <form
+      target='_blank'
+      rel='noopener noreferrer'
+      action={props.link}
+      className={props.vertical ? styles.vertical : styles.horizontal}
+    >
+      <button
+        type='submit'
+        className={
+          props.backgroundImage
+            ? [styles.button, styles[props.backgroundImage]].join(' ')
+            : styles.button
+        }
       >
-        <button type='submit'>
-          <span className={styles.buttonText}>{props.text}</span>
-        </button>
-      </form>
-      <span
-        className={[
-          styles.tooltipText,
-          props.tooltipPosition === 'top' ? styles.top : styles.bottom,
-        ].join(' ')}
-      >
-        {props.tooltipText}
-      </span>
-      <span
-        className={[
-          styles.tooltipConnector,
-          props.tooltipPosition === 'top' ? styles.top : styles.bottom,
-        ].join(' ')}
-      />
-    </div>
-  </span>
+        <div className={styles.backgroundLayer}>{props.text}</div>
+      </button>
+    </form>
+    <span
+      className={[
+        styles.tooltipText,
+        props.tooltipPosition === 'top' ? styles.top : styles.bottom,
+      ].join(' ')}
+    >
+      {props.tooltipText}
+    </span>
+    <span
+      className={[
+        styles.tooltipConnector,
+        props.tooltipPosition === 'top' ? styles.top : styles.bottom,
+      ].join(' ')}
+    />
+  </div>
 );
 
 ButtonLink.propTypes = {

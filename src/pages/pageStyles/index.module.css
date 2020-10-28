@@ -26,3 +26,34 @@ h2::before {
   visibility: hidden;
   pointer-events: none;
 }
+
+.flexContainer {
+  display: flex;
+  padding-left: 4em;
+  padding-right: 4em;
+  font-size: 20px;
+  width: 100%;
+}
+
+.flexContainer p {
+  align-items: center;
+  margin: 0;
+  margin-bottom: 1.45rem;
+}
+
+.flexChild {
+  margin: 1em;
+  flex: 2 0 calc(100vw - 11em - 34%);
+  align-self: center;
+}
+
+.flexChildImage {
+  min-width: 10em;
+  margin: 1em;
+  flex: 1 0 calc(100vw - 11em - 66%);
+  align-self: center;
+}
+
+.image {
+  margin: 0;
+}

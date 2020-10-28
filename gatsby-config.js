@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/nest',
+  pathPrefix: '/music/tmp',
   siteMetadata: {
     title: `Ideker Lab NeST Project Page`,
     description: `Ideker Lab project page for NeST (Nested Systems in Tumors)`,

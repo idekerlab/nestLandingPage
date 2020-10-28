@@ -7,10 +7,15 @@
   --tooltip-offset: 20px;
   --tooltip-border-radius: 15px;
   --button-side-spacing: 1em;
+  --button-spacing: 1em;
+  --button-height: 70px;
+  --button-width: 240px;
+  --border-width: 4px;
 }
 
 .vertical {
-  margin-bottom: var(--button-bottom-spacing);
+  margin-bottom: var(--button-spacing);
+  margin-top: var(--button-spacing);
 }
 
 .horizontal {
@@ -19,34 +24,72 @@
   flex-shrink: 0;
 }
 
-button {
+.button {
   font-style: normal;
-  font-weight: 100;
-  font-size: 24px;
+  font-size: 22px;
   display: flex;
   align-items: center;
   text-align: center;
-  width: 260px;
-  height: 80px;
+  width: var(--button-width);
+  height: var(--button-height);
   vertical-align: middle;
-  background-color: rgb(255, 140, 0);
-  color: white;
+
   border: none;
+  padding: 0;
 }
 
-button:hover {
-  background-color: #ffffff;
-  color: rgb(255, 140, 0, 0.9);
-  font-weight: 800;
+.button:hover {
   cursor: pointer;
-  letter-spacing: -0.1px;
-  border-radius: 1px;
+  color: black;
 }
 
-.buttonText {
-  display: inline-block;
-  line-height: 41px;
-  margin: auto;
+.textShadow {
+  text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff,
+    0.5px 0.5px 0 #fff;
+}
+
+.backgroundLayer {
+  height: var(--button-height);
+  width: var(--button-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: var(--border-width) solid rgb(255, 140, 0);
+}
+
+.backgroundLayer:hover {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.nest {
+  background-image: url(../../images/NeST_main_map.png);
+  background-position: 65% 52%;
+}
+
+.nest .backgroundLayer {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff,
+    0.5px 0.5px 0 #fff;
+}
+
+.ias {
+  background-image: url(../../images/ias.png);
+  background-position: 50% 89%;
+}
+
+.ias .backgroundLayer {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff,
+    0.5px 0.5px 0 #fff;
+}
+
+.hiview {
+  background-image: url(../../images/hiview.png);
+  background-position: 68% 100%;
+}
+
+.hiview .backgroundLayer {
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 .tooltip {

@@ -17,15 +17,13 @@ h1 {
 
 .title {
   composes: text;
-  font-size: 200px;
-  line-height: 140px;
+  font-size: 250px;
+  line-height: 250px;
 }
 
 .subtitle {
   composes: text;
-  font-size: 38px;
-  padding-top: 20px;
+  font-size: 45px;
+  line-height: 45px;
   position: relative;
-  line-height: 38px;
-  left: -13px;
 }
