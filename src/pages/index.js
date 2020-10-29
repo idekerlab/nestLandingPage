@@ -52,7 +52,6 @@ const IndexPage = () => (
         along with novel protein assemblies on which mutations unexpectedly
         converge.
       </p>
-
       <p>
         NeST was assembled by creating an{' '}
         <LinkOut link='http://www.ndexbio.org/?#/network/60112105-f853-11e9-bb65-0ac135e8bacf'>
@@ -100,13 +99,21 @@ const IndexPage = () => (
           </p>
         </div>
         <div className={styles.flexChildImage}>
-          <img src={nestImage} className={styles.image} />
+          <img
+            src={nestImage}
+            className={styles.image}
+            alt='NeST main map in NDEx'
+          />
         </div>
       </div>
 
       <div className={styles.flexContainer} style={{ flexWrap: 'wrap' }}>
-        <div className={styles.flexChildImage}>
-          <img src={hiviewImage} className={styles.image} />
+        <div className={styles.flexChildImage} style={{ marginTop: 0 }}>
+          <img
+            src={hiviewImage}
+            className={styles.image}
+            alt='NeST in HiView'
+          />
         </div>
         <div className={styles.flexChild}>
           <p>

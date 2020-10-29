@@ -42,15 +42,15 @@ h2::before {
 }
 
 .flexChild {
-  margin: 1em;
-  flex: 2 0 calc(100vw - 11em - 34%);
+  margin: 0 1em;
+  flex: 2 0 calc(100vw - 11em - 25%);
   align-self: center;
 }
 
 .flexChildImage {
   min-width: 10em;
   margin: 1em;
-  flex: 1 0 calc(100vw - 11em - 66%);
+  flex: 1 0 calc(100vw - 11em - 75%);
   align-self: center;
 }
 
