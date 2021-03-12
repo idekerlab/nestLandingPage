@@ -5,23 +5,22 @@ import styles from './componentStyles/buttonLink.module.css';
 
 const ButtonLink = (props) => (
   <div className={props.tooltip ? styles.tooltip : ''}>
-    <form
+    <a
+      href={props.link}
       target='_blank'
       rel='noopener noreferrer'
-      action={props.link}
-      className={props.vertical ? styles.vertical : styles.horizontal}
+      className={styles.noUnderline}
     >
-      <button
-        type='submit'
-        className={
-          props.backgroundImage
-            ? [styles.button, styles[props.backgroundImage]].join(' ')
-            : styles.button
-        }
+      <div
+        className={[
+          styles.button,
+          props.vertical ? styles.vertical : styles.horizontal,
+          props.backgroundImage ? styles[props.backgroundImage] : '',
+        ].join(' ')}
       >
         <div className={styles.backgroundLayer}>{props.text}</div>
-      </button>
-    </form>
+      </div>
+    </a>
     <span
       className={[
         styles.tooltipText,

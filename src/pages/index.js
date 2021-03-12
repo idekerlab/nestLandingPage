@@ -26,17 +26,17 @@ const IndexPage = () => (
       <VerticalButtonsContainer topOffset={'0.75em'}>
         <ButtonLink
           text='Browse NeST Map (NDEx)'
-          link='http://www.ndexbio.org/?#/network/9a8f5326-aa6e-11ea-aaef-0ac135e8bacf'
+          link='https://www.ndexbio.org/?#/network/9a8f5326-aa6e-11ea-aaef-0ac135e8bacf'
           backgroundImage='nest'
         />
         <ButtonLink
           text='Browse NeST Map (HiView)'
-          link='http://hiview.ucsd.edu/274fcd6c-1adc-11ea-a741-0660b7976219?type=test&server=http://test.ndexbio.edu'
+          link='http://hiview.ucsd.edu/274fcd6c-1adc-11ea-a741-0660b7976219?type=test&server=https://test.ndexbio.edu'
           backgroundImage='hiview'
         />
         <ButtonLink
           text='Browse Integrated Protein Network'
-          link='http://www.ndexbio.org/?#/network/60112105-f853-11e9-bb65-0ac135e8bacf'
+          link='https://www.ndexbio.org/?#/network/60112105-f853-11e9-bb65-0ac135e8bacf'
           backgroundImage='ias'
         />
       </VerticalButtonsContainer>
@@ -54,7 +54,7 @@ const IndexPage = () => (
       </p>
       <p>
         NeST was assembled by creating an{' '}
-        <LinkOut link='http://www.ndexbio.org/?#/network/60112105-f853-11e9-bb65-0ac135e8bacf'>
+        <LinkOut link='https://www.ndexbio.org/?#/network/60112105-f853-11e9-bb65-0ac135e8bacf'>
           Integrated Protein Network
         </LinkOut>{' '}
         combining evidence of interactions of five major data types: physical
@@ -67,7 +67,7 @@ const IndexPage = () => (
         resolutions, resulting in a hierarchy of systems. Finally, a statistical
         model called HiSig was developed to identify the systems on which cancer
         mutations significantly converge, yielding the{' '}
-        <LinkOut link='http://www.ndexbio.org/?#/network/9a8f5326-aa6e-11ea-aaef-0ac135e8bacf'>
+        <LinkOut link='https://www.ndexbio.org/?#/network/9a8f5326-aa6e-11ea-aaef-0ac135e8bacf'>
           NeST Systems Map
         </LinkOut>{' '}
         of 371 systems.
@@ -85,7 +85,7 @@ const IndexPage = () => (
         <div className={styles.flexChild}>
           <p>
             The NeST Systems Map is accessible via the{' '}
-            <LinkOut link='http://www.ndexbio.org/?#/network/9a8f5326-aa6e-11ea-aaef-0ac135e8bacf'>
+            <LinkOut link='https://www.ndexbio.org/?#/network/9a8f5326-aa6e-11ea-aaef-0ac135e8bacf'>
               NDEx (Network Data Exchange)
             </LinkOut>
             , an online commons for biological networks. In NDEx, the map
@@ -118,7 +118,7 @@ const IndexPage = () => (
         <div className={styles.flexChild}>
           <p>
             An alternative means of exploring the NeST map is provided by{' '}
-            <LinkOut link='http://hiview.ucsd.edu/274fcd6c-1adc-11ea-a741-0660b7976219?type=test&server=http://test.ndexbio.edu'>
+            <LinkOut link='https://hiview.ucsd.edu/274fcd6c-1adc-11ea-a741-0660b7976219?type=test&server=https://test.ndexbio.edu'>
               HiView
             </LinkOut>
             , in which the hierarchical structure is represented as a

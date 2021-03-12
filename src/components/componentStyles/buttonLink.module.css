@@ -33,7 +33,7 @@
   width: var(--button-width);
   height: var(--button-height);
   vertical-align: middle;
-
+  color: black;
   border: none;
   padding: 0;
 }
@@ -181,4 +181,8 @@
 
 .tooltipConnector.bottom {
   transform: translate(-50%, 0);
+}
+
+.noUnderline {
+  text-decoration: none;
 }

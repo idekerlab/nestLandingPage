@@ -17,7 +17,7 @@ const Header = ({ siteTitle }) => (
         </a>
         <a
           className={styles.noUnderlineLink}
-          href='http://idekerlab.ucsd.edu'
+          href='https://idekerlab.ucsd.edu'
           target='_blank'
           rel='noopener noreferrer'
         >
@@ -25,7 +25,7 @@ const Header = ({ siteTitle }) => (
         </a>
         <a
           className={styles.underlineLink}
-          href='http://idekerlab.ucsd.edu'
+          href='https://idekerlab.ucsd.edu'
           target='_blank'
           rel='noopener noreferrer'
         >
