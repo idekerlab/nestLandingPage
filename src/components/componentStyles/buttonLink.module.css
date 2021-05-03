@@ -36,16 +36,11 @@
   color: black;
   border: none;
   padding: 0;
+  font-weight: 800;
 }
 
 .button:hover {
   cursor: pointer;
-  color: black;
-}
-
-.textShadow {
-  text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff,
-    0.5px 0.5px 0 #fff;
 }
 
 .backgroundLayer {
@@ -63,7 +58,7 @@
 
 .nest {
   background-image: url(../../images/NeST_main_map.png);
-  background-position: 65% 52%;
+  background-position: 40% 40%;
 }
 
 .nest .backgroundLayer {
@@ -77,10 +72,19 @@
   background-position: 50% 89%;
 }
 
+.ias:hover {
+  color: white;
+}
+
 .ias .backgroundLayer {
   background-color: rgba(255, 255, 255, 0.5);
   text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff,
     0.5px 0.5px 0 #fff;
+}
+
+.ias .backgroundLayer:hover {
+  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000,
+    0.5px 0.5px 0 #000;
 }
 
 .hiview {

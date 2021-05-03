@@ -26,7 +26,7 @@ const IndexPage = () => (
       <VerticalButtonsContainer topOffset={'0.75em'}>
         <ButtonLink
           text='Browse NeST Map (NDEx)'
-          link='https://www.ndexbio.org/?#/network/9a8f5326-aa6e-11ea-aaef-0ac135e8bacf'
+          link='https://www.ndexbio.org/viewer/networks/9a8f5326-aa6e-11ea-aaef-0ac135e8bacf'
           backgroundImage='nest'
         />
         <ButtonLink
@@ -36,7 +36,7 @@ const IndexPage = () => (
         />
         <ButtonLink
           text='Browse Integrated Protein Network'
-          link='https://www.ndexbio.org/?#/network/60112105-f853-11e9-bb65-0ac135e8bacf'
+          link='https://www.ndexbio.org/viewer/networks/60112105-f853-11e9-bb65-0ac135e8bacf'
           backgroundImage='ias'
         />
       </VerticalButtonsContainer>
@@ -118,7 +118,7 @@ const IndexPage = () => (
         <div className={styles.flexChild}>
           <p>
             An alternative means of exploring the NeST map is provided by{' '}
-            <LinkOut link='https://hiview.ucsd.edu/274fcd6c-1adc-11ea-a741-0660b7976219?type=test&server=https://test.ndexbio.edu'>
+            <LinkOut link='http://hiview.ucsd.edu/274fcd6c-1adc-11ea-a741-0660b7976219?type=test&server=https://test.ndexbio.edu'>
               HiView
             </LinkOut>
             , in which the hierarchical structure is represented as a
