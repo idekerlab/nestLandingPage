@@ -19,7 +19,7 @@ const contrastBackgroundColor = 'rgba(65,182,255, 0.25)';
 const contrastTextColor = 'black';
 
 const IndexPage = () => (
-  <Layout backgroundColor={contrastBackgroundColor}>
+  <Layout>
     <SEO title='NeST' />
     <TopPanel>
       <VerticalTitle title='NeST' subtitle='Nested Systems in Tumors' />
@@ -45,7 +45,7 @@ const IndexPage = () => (
     <Panel backgroundColor='white' textColor='rgba(0, 0, 0, 0.8)'>
       <h2>What is NeST?</h2>
       <p>
-        The NeST (Nested Systems in Tumors) map is a hierarchy of 371 protein
+        The NeST (Nested Systems in Tumors) map is a hierarchy of 395 protein
         systems that are recurrently mutated in one or more cancer types. It
         provides a resource of cancer mechanisms under selection for somatic
         mutations and captures canonical cancer pathways and protein complexes,
@@ -70,7 +70,7 @@ const IndexPage = () => (
         <LinkOut link='https://www.ndexbio.org/?#/network/9a8f5326-aa6e-11ea-aaef-0ac135e8bacf'>
           NeST Systems Map
         </LinkOut>{' '}
-        of 371 systems.
+        of 395 systems.
       </p>
     </Panel>
     <Panel
@@ -151,16 +151,6 @@ const IndexPage = () => (
             HiSig: identifying significantly mutated systems
           </LinkOut>
         </strong>
-      </p>
-    </Panel>
-    <Panel
-      backgroundColor={contrastBackgroundColor}
-      textColor={contrastTextColor}
-    >
-      <h2>Publication</h2>
-      <p>
-        The NeST map is described in the publication by Zheng et al. Convergence
-        of cancer mutations on a hierarchy of protein systems. (Submitted).
       </p>
     </Panel>
   </Layout>
