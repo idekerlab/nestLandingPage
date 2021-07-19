@@ -1,99 +1,155 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Nest landing page
+A webpage built to showcase the web resources associated with the Nested Systems in Tumors paper.
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+URL:
+* https://idekerlab.usd.edu/nest
+* https://ccmi.org/nest
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+### Table of contents
+* [Quick start](#quick-start)
+* [About landing pages](#landing-pages)
+* [About NeST landing page]()
 
-## 🚀 Quick start
+## Quick start
 
-1.  **Create a Gatsby site.**
+### To edit:
+```
+git clone https://github.com/idekerlab/nestLandingPage.git
+cd nestLandingPage
+gatsby develop
+```
+The web page will be available at `http://localhost:8000/`. Once code changes are saved, the site will hot reload to reflect the recent changes.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+### To build:
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+#### No prefix:
+```
+git clone https://github.com/idekerlab/nestLandingPage.git
+cd nestLandingPage
+gatsby build
+```
+Build will be in the `nestLandingPage/public` directory.
 
-1.  **Start developing.**
+#### Prefix:
+If the website url has a prefix (i.e. `https://theurl.com/prefix`), then:
 
-    Navigate into your new site’s directory and start it up.
+1. In the `nestLandingPage/gatsby-config.js` file, edit the `pathPrefix` field.
+```
+module.exports = {
+  pathPrefix: '/prefix',
+  ...
+}
+```
+2. Build using the `--prefix-paths` option
+```
+gatsby build --prefix-paths
+```
+Build will be in the `nestLandingPage/public` directory.
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+## Landing pages
 
-1.  **Open the source code and start editing!**
+Landing pages serve as online hubs for all of the resources associated with a paper. This can include:
 
-    Your site is now running at `http://localhost:8000`!
+* A link to the paper itself
+* NDEx/HiView networks
+* Data
+* Github repositories
+* Custom components for interacting with the data
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+### Building a landing page
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+#### 1. Clone the template landing page repository
+```
+git clone https://github.com/Ceofy/templateLandingPage.git
+mv templateLandingPage <your project's name + LandingPage>
+```
+##### Create a github repository for your new landing page
+```
+git remote set-url origin https://github.com/<path to new github repository>.git
+git branch -M main
+git push -u origin main
+```
 
-## 🧐 What's inside?
+#### 2. Fill out placeholder fields with relevant information
+##### `xLandingPage/src/index.js`
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+This is the main page that will be displayed.
+* Replace the `Title` in `<SEO title='Title' />` with the name of the project.
+* Replace the `Title` and `Subtitle` in `VerticalTitle title='Title' subtitle='Subtitle' />` with the name of the project, and an informative subtitle. ([More on titles](#titles).)
+* Replace the contents of the buttons with the appropriate information. ([More on buttons](#buttons).)
+* Replace the contents of:
+```
+<Panel>
+  <h2>What is this about?</h2>
+  <p>Some info about what this is about.</p>
+</Panel>
+```
+making sure to use the `<h2>` and `<p>` tags. ([More on panels](#panels).)
+* If this project doesn't use NDEx or HiView, remove the `What is NDEx?` or `What is HiView?` paragraphs, as well as the references to them in the buttons at the top of the page. Otherwise, replace the `Title` link in the `What is NDEx?` paragraph with the title of your project, and the URL of your network in NDEx. Edit the paragraphs to suit your needs.
+* Replace the collaborator logos in the Collaborators section with the appropriate logos, and ensure they link to the right websites. ([More on links](#links).)
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+##### `xLandingPage/src/components/componentStyles/topPanel.module.css`
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+This is the stylesheet for the top panel of the main page.
+* Replace the background image of the top panel by placing the image of your choice (usually a picture of the NDEx network associated with the project) in the `xLandingPage/src/images` directory. Then, replace the image in this file (`lightsaber.webp`) with your chosen image.
+```
+.background {
+  background-image: url(../../images/lightsaber.webp);
+  ...
+}
+```
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+##### `xLandingPage/gatsby-config.js`
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+This is the gatsby configuration page.
+* Replace the `prefix` in ``pathPrefix: `/prefix`,`` if necessary. ([More on prefixes](#prefix).)
+* Replace the `Title` and `Subtitle` in:
+```
+siteMetadata: {
+  title: `Title`,
+  description: `Ideker Lab project page for Title (Subtitle)`,
+  author: `UCSD Ideker Lab`,
+},
+```
+with the title and subtitle of your project.
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+#### 3. Add unique touches
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+See the [Landing page components](#landing-page-components) section to learn more about how to customize this landing page.
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+Or, write your own components in React or by using React libraries.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+### Landing page components
+#### Titles
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+There are five components related to titles:
+* `TopPanel`
+* `VerticalTitle`
+* `VerticalButtonsContainer`
+* `HorizontalTitle`
+* `HorizontalButtonsContainer`
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+The `TopPanel` is the container for all things title-related. It will normally contain a "`Title`" component, followed by a "`ButtonsContainer`" component.
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+The "`Vertical`" components work together, and the "`Horizontal`" components work together.
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+Using a `HorizontalTitle` and `HorizontalButtonsContainer` will result in a layout where the title sits above the buttons, and the buttons are arranged horizontally across the screen (eg. [BRCA](https://idekerlab.ucsd.edu/breastcancer/)).
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+Using a `VerticalTitle` and `VerticalButtonsContainer` will result in a layout where the title lies to the left of the buttons, and the buttons are stacked vertically on top of each other (eg. [NeST](https://idekerlab.ucsd.edu/ddram/)). `Button` components contained inside the `VerticalButtonsContainer` must have the `vertical` prop set to `true`:
+```
+<TopPanel>
+  <VerticalTitle .../>
+  <VerticalButtonsContainer>
+    <Button
+      vertical={true}
+      ...
+    />
+  </VerticalButtonsContainer>
+</TopPanel>
+```
 
-## 🎓 Learning Gatsby
+#### Buttons
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+#### Panels
+#### Links
