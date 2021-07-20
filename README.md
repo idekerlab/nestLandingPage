@@ -63,8 +63,9 @@ Landing pages serve as online hubs for all of the resources associated with a pa
 git clone https://github.com/Ceofy/templateLandingPage.git
 mv templateLandingPage <your project's name + LandingPage>
 ```
-##### Create a github repository for your new landing page
+Create a github repository for your new landing page. Then, execute the following code:
 ```
+cd <your project's name + LandingPage>
 git remote set-url origin https://github.com/<path to new github repository>.git
 git branch -M main
 git push -u origin main
