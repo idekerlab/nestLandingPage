@@ -54,7 +54,7 @@ const IndexPage = () => (
       </p>
       <p>
         NeST was assembled by creating an{' '}
-        <LinkOut link='https://www.ndexbio.org/?#/network/60112105-f853-11e9-bb65-0ac135e8bacf'>
+        <LinkOut link='https://www.ndexbio.org/viewer/networks/60112105-f853-11e9-bb65-0ac135e8bacf'>
           Integrated Protein Network
         </LinkOut>{' '}
         combining evidence of interactions of five major data types: physical
@@ -67,7 +67,7 @@ const IndexPage = () => (
         resolutions, resulting in a hierarchy of systems. Finally, a statistical
         model called HiSig was developed to identify the systems on which cancer
         mutations significantly converge, yielding the{' '}
-        <LinkOut link='https://www.ndexbio.org/?#/network/9a8f5326-aa6e-11ea-aaef-0ac135e8bacf'>
+        <LinkOut link='https://www.ndexbio.org/viewer/networks/9a8f5326-aa6e-11ea-aaef-0ac135e8bacf'>
           NeST Systems Map
         </LinkOut>{' '}
         of 395 systems.
@@ -85,7 +85,7 @@ const IndexPage = () => (
         <div className={styles.flexChild}>
           <p>
             The NeST Systems Map is accessible via the{' '}
-            <LinkOut link='https://www.ndexbio.org/?#/network/9a8f5326-aa6e-11ea-aaef-0ac135e8bacf'>
+            <LinkOut link='https://www.ndexbio.org/viewer/networks/9a8f5326-aa6e-11ea-aaef-0ac135e8bacf'>
               NDEx (Network Data Exchange)
             </LinkOut>
             , an online commons for biological networks. In NDEx, the map
@@ -152,6 +152,22 @@ const IndexPage = () => (
           </LinkOut>
         </strong>
       </p>
+    </Panel>
+    <Panel backgroundColor={contrastBackgroundColor}
+      textColor={contrastTextColor}
+    >
+      <h2>How to cite</h2>
+      <p>
+      Zheng F*, Kelly MR*, Ramms DJ, Heintschel ML, Tao K, 
+      Tutuncuoglu B, Lee JJ, Ono K, Foussard H, Chen M, Herrington KA, 
+      Silva E, Liu SN, Chen J, Churas C, Wilson N, Kratz A, Pillich RT, 
+      Patel DN, Park J, Kuenzi B, Yu MK, Licon K, Pratt D, Kreisberg JF, 
+      Kim M, Swaney DL, Nan X, Fraley SI, Gutkind JS, Krogan NJ†, Ideker T†. 
+      <LinkOut link='https://doi.org/10.1126/science.abf3067'>Interpretation of cancer mutations using a multiscale map of protein systems. </LinkOut>
+      Science. 2021 Oct;374(6563):eabf3067. doi: 10.1126/science.abf3067. 
+      Epub 2021 Oct 1. PMID: 34591613 *Equal Contribution, †Co-Corresponding Authors
+      </p>
+      
     </Panel>
   </Layout>
 );
