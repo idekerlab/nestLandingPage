@@ -96,6 +96,7 @@ const IndexPage = () => (
             size (number of proteins). The map can also be directly downloaded
             to the <LinkOut link='https://cytoscape.org/'>Cytoscape</LinkOut>{' '}
             network visualization and analysis platform.
+            The NeST model is also available in OBO format on <LinkOut link='https://zenodo.org/record/5650099'>Zenodo</LinkOut>.
           </p>
         </div>
         <div className={styles.flexChildImage}>
@@ -158,16 +159,16 @@ const IndexPage = () => (
     >
       <h2>How to cite</h2>
       <p>
-      Zheng F*, Kelly MR*, Ramms DJ, Heintschel ML, Tao K, 
-      Tutuncuoglu B, Lee JJ, Ono K, Foussard H, Chen M, Herrington KA, 
-      Silva E, Liu SN, Chen J, Churas C, Wilson N, Kratz A, Pillich RT, 
-      Patel DN, Park J, Kuenzi B, Yu MK, Licon K, Pratt D, Kreisberg JF, 
-      Kim M, Swaney DL, Nan X, Fraley SI, Gutkind JS, Krogan NJ†, Ideker T†. 
+      Zheng F*, Kelly MR*, Ramms DJ, Heintschel ML, Tao K,
+      Tutuncuoglu B, Lee JJ, Ono K, Foussard H, Chen M, Herrington KA,
+      Silva E, Liu SN, Chen J, Churas C, Wilson N, Kratz A, Pillich RT,
+      Patel DN, Park J, Kuenzi B, Yu MK, Licon K, Pratt D, Kreisberg JF,
+      Kim M, Swaney DL, Nan X, Fraley SI, Gutkind JS, Krogan NJ†, Ideker T†.
       <LinkOut link='https://doi.org/10.1126/science.abf3067'>Interpretation of cancer mutations using a multiscale map of protein systems. </LinkOut>
-      Science. 2021 Oct;374(6563):eabf3067. doi: 10.1126/science.abf3067. 
+      Science. 2021 Oct;374(6563):eabf3067. doi: 10.1126/science.abf3067.
       Epub 2021 Oct 1. PMID: 34591613 *Equal Contribution, †Co-Corresponding Authors
       </p>
-      
+
     </Panel>
   </Layout>
 );
